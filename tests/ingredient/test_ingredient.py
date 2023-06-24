@@ -1,6 +1,12 @@
-from src.models.ingredient import Ingredient  # noqa: F401, E261, E501
+from src.models.ingredient import Ingredient
 
 
-# Req 1
 def test_ingredient():
-    pass
+    fettuccine = Ingredient('fettuccine')
+    fettuccine2 = Ingredient('fettuccine')
+    risoto = Ingredient('risoto')
+    assert fettuccine == fettuccine2
+    assert fettuccine.restrictions == set()
+    assert repr(fettuccine) == "Ingredient('fettuccine')"
+    assert risoto.name == 'risoto'
+    assert hash(risoto) == hash('risoto')
