@@ -24,7 +24,6 @@ class MenuBuilder:
 
         self.inventory.consume_recipe(curr_dish.recipe)
 
-    # Req 4
     def get_main_menu(self, restriction=None) -> pd.DataFrame:
         dishes = self.menu_data.dishes
         menu_restrictions = list()
